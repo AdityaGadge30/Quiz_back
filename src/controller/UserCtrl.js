@@ -89,7 +89,9 @@ const PostUserLogin = async (req , res) =>{
             const token = await user.generateToken();
             const option = {
                 expires: new Date(Date.now() + 90 * 24 * 60 * 60 * 1000),
-                httpOnly: false
+                httpOnly: true,
+                secure: true,
+                domain: 'https://onlinequiz30.netlify.app'
             }
 
             const aa = user._id;
