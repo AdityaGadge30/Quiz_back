@@ -19,7 +19,7 @@ require("dotenv").config();
 
 
 app.use(cors({
-    origin:"http://localhost:3000",
+    origin:"https://onlinequiz30.netlify.app",
     credentials: true,
 }));
 
