@@ -97,7 +97,7 @@ const PostUserLogin = async (req , res) =>{
 
             const aa = user._id;
             console.log(aa);
-            res.cookie("user_id" , aa.toString() , option );
+            res.cookie("user_id" , aa.toString() );
             res.status(200).cookie("token", token, option).json({
                 success: true,
                 user,
