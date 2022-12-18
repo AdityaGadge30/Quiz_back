@@ -91,6 +91,7 @@ const PostUserLogin = async (req , res) =>{
                 expires: new Date(Date.now() + 90 * 24 * 60 * 60 * 1000),
                 httpOnly: true,
                 secure: true,
+                sameSite:'none',
                 domain: 'https://onlinequiz30.netlify.app'
             }
 
