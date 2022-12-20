@@ -92,12 +92,12 @@ const PostUserLogin = async (req , res) =>{
                 httpOnly:false,
                 secure: false,
                 sameSite:'none',
-                
+
             }
 
             const aa = user._id;
             console.log(aa);
-            res.cookie("user_id" , aa.toString() );
+            res.cookie("user_id" , aa.toString() , option );
             res.status(200).cookie("token", token, option).json({
                 success: true,
                 user,

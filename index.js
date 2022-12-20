@@ -11,7 +11,10 @@ const userRouter = require("./src/routes/userRouter");
 const port = process.env.PORT || 5000 ;
 const cookieParser = require('cookie-parser');
 const cors = require('cors');
-
+app.use(express.json());
+app.use(express.urlencoded({extended : true}));
+app.use(cookieParser());
+    
 
 
 
@@ -19,15 +22,12 @@ require("dotenv").config();
 
 
 app.use(cors({
-    origin:"https://onlinequiz30.netlify.app",
+    origin:"https://localhost:3000",
     credentials: true,
 }));
 
 
-app.use(express.json());
-app.use(express.urlencoded({extended : true}));
-app.use(cookieParser());
-    
+
 app.use(userRouter);
 
 app.get("/" , (req,res)=>{
