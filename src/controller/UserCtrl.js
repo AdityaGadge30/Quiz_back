@@ -89,8 +89,8 @@ const PostUserLogin = async (req , res) =>{
             const token = await user.generateToken();
             const option = {
                 expires: new Date(Date.now() + 90 * 24 * 60 * 60 * 1000),
-                httpOnly:false,
-                secure: false,
+                httpOnly:true,
+                secure: true,
                 sameSite:'none',
 
             }
