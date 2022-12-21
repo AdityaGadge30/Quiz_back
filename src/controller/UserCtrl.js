@@ -92,7 +92,10 @@ const PostUserLogin = async (req , res) =>{
                 httpOnly:true,
                 secure: true,
                 SameSite:'none',
-                domain:'https://onlinequiz30.netlify.app'
+                domain:'https://onlinequiz30.netlify.app',
+                "Access-Control-Allow-Credentials ": true,
+                "Access-Control-Allow-Origin " : "https://onlinequiz30.netlify.app",
+                
 
             }
 

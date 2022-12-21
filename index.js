@@ -20,7 +20,7 @@ app.use(cookieParser());
 
 require("dotenv").config();
 
-app.set('trust proxy', process.env.NODE_ENV !== 'production');
+
 app.use(cors({
     origin:"*",
     credentials: true,
