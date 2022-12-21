@@ -92,7 +92,7 @@ const PostUserLogin = async (req , res) =>{
                 httpOnly:true,
                 secure: true,
                 SameSite:'none',
-            
+                domain:'https://onlinequiz30.netlify.app'
 
             }
 
