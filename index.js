@@ -22,7 +22,7 @@ require("dotenv").config();
 
 
 app.use(cors({
-    origin:"https://onlinequiz30.netlify.app",
+    origin:"*",
     credentials: true,
 }));
 
